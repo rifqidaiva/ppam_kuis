@@ -49,7 +49,13 @@ class _PageHomeState extends State<PageHome> {
               ),
             ),
           ),
-          const Text("Makanan"),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "Makanan",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
           Expanded(
             child: _listBuilder(),
           ),
@@ -87,7 +93,10 @@ class _PageHomeState extends State<PageHome> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Selamat datang, ${widget.username}!"),
+        Text(
+          "Selamat datang, ${widget.username}!",
+          style: const TextStyle(fontSize: 16),
+        ),
         const Text("Mau makan apa hari ini?"),
       ],
     );

@@ -41,10 +41,13 @@ class _PageOrderState extends State<PageOrder> {
             Text(
               "Rp.${foods[widget.foodIndex]["price"] ?? "0"}",
             ),
-            TextField(
-              controller: _amountController,
-              decoration: const InputDecoration(
-                labelText: "Jumlah",
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                controller: _amountController,
+                decoration: const InputDecoration(
+                  labelText: "Jumlah",
+                ),
               ),
             ),
             Text("Rp.${_totalPayment.toString()}"),
