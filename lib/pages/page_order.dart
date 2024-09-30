@@ -15,7 +15,7 @@ class PageOrder extends StatefulWidget {
 
 class _PageOrderState extends State<PageOrder> {
   final _amountController = TextEditingController();
-  var totalPayment = 0;
+  var _totalPayment = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -47,12 +47,12 @@ class _PageOrderState extends State<PageOrder> {
                 labelText: "Jumlah",
               ),
             ),
-            Text("Rp.${totalPayment.toString()}"),
+            Text("Rp.${_totalPayment.toString()}"),
             ElevatedButton(
               onPressed: () {
                 setState(
                   () {
-                    totalPayment =
+                    _totalPayment =
                         int.parse(foods[widget.foodIndex]["price"] ?? "0") *
                             int.parse(_amountController.text.isEmpty
                                 ? "0"
